@@ -1,38 +1,347 @@
-.App {
-  text-align: center;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+    padding: 2rem;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
+    background-color: #dadada;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.app {
+    display: flex;
+    text-align: center;
+}
+
+.bar {
+    height: fit-content;
+    padding: 20px;
+    margin-right: 20px;
+    border-radius: 5px;
+    background-color: rgba(155, 155, 155, 0.3);  
+    backdrop-filter: blur(10px);
+    border: 3px solid rgb(111, 111, 111);
+}
+
+.profile-picture {
+    border-radius: 50%;
+    width: 96px;
+}
+
+button {
+    margin: 2rem 0;
+    padding: 1rem 2rem;
+    width: 120px;
+    cursor: pointer;
+}
+
+.leaders {
+    text-align: center;
+    width: 90%;
+    height: fit-content;
+    border: 3px solid yellow;
+    border-radius: 5px;
+}
+
+.leaders > h2 {
+    font-size: 50px;
+    margin-bottom: 50px;
+}
+
+.leaders > img {
+    cursor: pointer;
+    padding: 10px;
+    margin: 10px;
+    border: 2px solid black;
+    border-radius: 5px;
+    background-color: white;
+}
+
+.leaders > img:hover {
+    border: 2px solid blue;
+}
+
+.elite4 {
+    text-align: center;
+    width: 90%;
+    height: fit-content;
+    border: 3px solid yellow;
+    border-radius: 5px;
+    margin-top: 30px;
+}
+
+.elite4 > h2 {
+    font-size: 50px;
+    margin-bottom: 50px;
+}
+
+.elite4 > img {
+    cursor: pointer;
+    padding: 10px;
+    margin: 10px;
+    border: 2px solid black;
+    border-radius: 5px;
+    background: white;
+}
+
+.elite4 > img:hover {
+    border: 2px solid blue;
+}
+
+
+.team > img {
+    width: 50px;
+    background-color: white;
+    border: 3px solid black;
+    border-radius: 50%;
+}
+
+.modal {
+    position: fixed;
+    overflow: hidden;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.65);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5em 1em;
+    z-index: 999999;
+    box-sizing: border-box;
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  
+  .modal.modal-fade {
+    animation: fade-in 1s 1 linear;
+    animation-fill-mode: forwards;
+    opacity: 0;
   }
-  to {
-    transform: rotate(360deg);
+  
+  .modal > .modal-overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
   }
+  
+  .modal > .modal-close {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    color: #5e5e5e;
+    cursor: pointer;
+    font-size: 1.25em;
+    padding: 7px;
+    background: rgba(255, 255, 255, 0.749);
+    border: 1px solid #c3c0c0;
+    border-radius: 50%;
+    width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999999;
+    box-sizing: border-box;
+    display: inline-block;
+    text-align: center;
+  }
+  
+  .modal > .modal-close:hover {
+    background: rgba(255, 255, 255, 0.989);
+  }
+  
+  .modal > .modal-body {
+    z-index: 2;
+    position: relative;
+    margin: 0 auto;
+    background-color: #303030;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 3px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    max-height: 100%;
+    padding: 15px 20px;
+    color: #c3c0c0;
+  }
+  
+  
+  @keyframes fade-in {
+    0% {
+      animation-timing-function: cubic-bezier(0.2242, 0.7499, 0.3142, 0.8148);
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+.brock {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.brock-info {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.brock-info > h2 {
+    width: 100%;
+}
+.brock-info > p {
+    width: 100%;
+}
+
+.brock-info > .team {
+    margin-top: 40px;
+    margin-left: 10px;
+}
+
+.brock-img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    object-position: 0% 0%;
+    border-radius: 50%;
+    background-color: white;
+    border: 10px solid black;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.profile {
+    width: 120px;
+}
+
+.feed-x {
+    width: 120px;
+    margin-top: 30px;
+    display: flex;
+}
+
+.feed {
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.text-box {
+    width: 600px;
+    max-width: 100%;
+    height: 100px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 5px;
+    border-radius: 5px;
+    margin-top: 30px;
+    margin-left: 30px;
+}
+
+form > input[type=submit] {
+    display: block;
+    width: 100px;
+    padding: 10px;
+    margin-top: 10px;
+    margin-left: 30px;
+}
+
+.box {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    display: flex;
+    align-items: flex-start;
+}
+
+.user {
+    border: 3px solid black;
+    width: 120px;
+    height: 180px;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: center;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #5e5e5e;
+    color: white;
+}
+
+.user > img {
+    width: 96px;
+    height: 96px;
+    object-fit: cover;
+    object-position: 20% 10%;
+    border-radius: 50%;
+}
+
+.user > h2 {
+    font-size: 14px;
+}
+
+.comment {
+    background-color: white;
+    color: black;
+    width: 100%;
+    margin: 10px 0 0 10px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 3px solid black;
+}
+
+.user > p {
+    font-size: 11px;
+}
+
+.post {
+    display: flex;
+    flex-wrap: wrap;
+}
+.post > .team {
+    width: 100%;
+    margin: 0 0 0 10px;
+}
+
+.poke-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.poke-card {
+    width: 120px;
+    margin: 5px;
+    cursor: pointer;
+    background-color:honeydew;
+    border-radius: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.poke-card > h3 {
+    color: black;
+    width: 100%;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.poke-card:hover {
+    border: 3px solid yellow;
+}
+
+.button-team {
+    width: 120px;
+    height: fit-content;
+}
+
+.teamBuilder {
+    display: none;
 }
