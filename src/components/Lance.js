@@ -14,7 +14,7 @@ function show() {
 }
 
 const Lance = () => {
-    const { isAuthenticated } = useAuth0()
+    // const { isAuthenticated } = useAuth0()
     return (
         <div className='brock'>
             <div className='brock-info'>
@@ -32,9 +32,9 @@ const Lance = () => {
             </div>
             <div className='feed-x'>
                 <Profile />
-                <LoginButton />
+                {/* <LoginButton /> */}
             </div>
-                {isAuthenticated && (
+                {/* {isAuthenticated && ( */}
                 <div className='feed'>
                 <button type='button' className='button-team' onClick={show}>Select a team</button>
                 <form>
@@ -45,7 +45,7 @@ const Lance = () => {
                     <TeamBuilder />
                 </div>
                 </div>
-                )}
+                {/* )} */}
                 <div className='box'>
                     <div className='user'>
                         <img src='https://preview.redd.it/731q4046azz21.png?auto=webp&s=6a5a9793c565856c07e0bf854045b5db3ccaa324' className='user-picture' />

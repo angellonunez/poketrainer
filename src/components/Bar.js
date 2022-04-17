@@ -8,8 +8,8 @@ const Bar = () => {
     return (
         <div className='bar'>
             <Profile />
-            <LoginButton />
-            <LogoutButton />
+            {/* <LoginButton /> */}
+            {/* <LogoutButton /> */}
         </div>
     )
 }
