@@ -10,9 +10,9 @@ import { useRef } from 'react';
 import TeamBuilder from './components/TeamBuilder'
 
 function App() {
-  const { isLoading } = useAuth0();
+  // const { isLoading } = useAuth0();
 
-  if(isLoading) return <div>Loading...</div>
+  // if(isLoading) return <div>Loading...</div>
 
   return (
     <>
